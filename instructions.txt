@@ -1,0 +1,11 @@
+Instalar flake8 y demas requerimentos
+sudo docker-compose build
+
+comando para correr en la branch test
+sudo docker-compose run app sh -c "python manage.py test && flake8"
+
+comando para crear el core del proyecto
+sudo docker-compose run app sh -c "python manage.py startapp core"
+
+comando para mmigraciones (como se cambia el modelo de usario por default que tiene django)
+sudo docker-compose run app sh -c "python manage.py makemigrations core"
